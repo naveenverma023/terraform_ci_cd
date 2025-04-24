@@ -1,5 +1,5 @@
 module "network" {
-  source                = "github.com/OT-terraform-azure-modules/terraform-azure-network-skeleton?ref=v1.0.0"
+  source                = "github.com/OT-terraform-azure-modules/terraform-azure-network-skeleton//Network-skeleton?ref=v1.0.0"
   create_resource_group = var.create_resource_group
   resource_group_name   = var.resource_group_name
   location              = var.location
