@@ -20,8 +20,8 @@ variable "vnets" {
 
 variable "subnets" {
   type = map(object({
-    name            = string
-    vnet_name       = string
+    name             = string
+    vnet_name        = string
     address_prefixes = list(string)
   }))
 }
