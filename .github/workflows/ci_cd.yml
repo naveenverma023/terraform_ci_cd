@@ -30,7 +30,7 @@ jobs:
       - name: Linting - Format Check
         run: |
             ls 
-            fmt_check=$(terraform fmt -check)
+            fmt_check=$(terraform fmt -check) || echo "Generating the format check result..."
             if [ ! -z "$fmt_check" ]; then
               echo "The following files needs to be formatted: $fmt_check"
             else
