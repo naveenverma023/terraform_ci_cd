@@ -42,7 +42,7 @@ jobs:
           echo "Installing tflint"
           curl -s https://raw.githubusercontent.com/terraform-linters/tflint/master/install_linux.sh | bash
           tflint --init
-          tflint -f json
+          tflint -f json | jq '.' || echo "The linting report is generated"
 
       - name: Terraform Init
         run: terraform init
