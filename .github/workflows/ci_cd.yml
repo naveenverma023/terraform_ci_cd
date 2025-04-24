@@ -39,6 +39,7 @@ jobs:
 
       - name: Linting - TFLint
         run: |
+          echo "Installing tflint"
           curl -s https://raw.githubusercontent.com/terraform-linters/tflint/master/install_linux.sh | bash
           tflint --init
           tflint .
